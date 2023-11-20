@@ -1,0 +1,57 @@
+---
+
+---
+
+<nav class="flex justify-center text-white w-full mx-auto py-1 bg-slate-700">
+  <ul class="flex justify-around">
+    <li>
+      <a
+        href="/"
+        class="font-bold text-lg hover:bg-gray-700 px-2 py-1 rounded-lg"
+        >Inicio</a
+      >
+    </li>
+    <li>
+      <a
+        href="/about"
+        class="font-bold text-lg hover:bg-gray-700 px-2 py-1 rounded-lg"
+        >Formación</a
+      >
+    </li>
+    <li>
+      <a
+        href="#proyectos"
+        class="font-bold text-lg hover:bg-gray-700 px-2 py-1 rounded-lg"
+        >Proyectos</a
+      >
+    </li>
+  </ul>
+</nav>
+
+<style>
+  .static {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: rgb(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+  }
+</style>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', (e) => {
+      const alpunto1050 = 258;
+      // console.log('ancho', document.body.clientWidth);
+      // console.log('el punto', window.scrollY);
+
+      if (document.body.clientWidth <= 500) {
+        nav.classList.toggle('static', window.scrollY >= 124);
+      }
+      if (document.body.clientWidth >= 1050) {
+        nav.classList.toggle('static', window.scrollY >= alpunto1050);
+      }
+    });
+  });
+</script>

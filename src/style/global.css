@@ -1,0 +1,42 @@
+.animated-title {
+  background-image: linear-gradient(to right, #0073e6, #10f26e);
+  background-clip: text;
+  color: transparent;
+  animation: textAnimation 3s linear infinite; /* Nueva animación para el color del texto */
+}
+
+@keyframes textAnimation {
+  0% {
+    color: transparent;
+  }
+  25% {
+    color: #ffcc00; /* Cambia este valor al color que desees en el 25% de la animación */
+  }
+  50% {
+    color: #4caf50; /* Cambia este valor al color que desees en el 50% de la animación */
+  }
+  75% {
+    color: #2196f3; /* Cambia este valor al color que desees en el 75% de la animación */
+  }
+  100% {
+    color: transparent;
+  }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    clip-path: polygon(0 0, 0 0, 100% 100%, 0% 100%);
+  }
+  25% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  50% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  75% {
+    clip-path: polygon(0 0, 100% 0, 0% 100%, 0% 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 0% 100%, 0% 100%);
+  }
+}

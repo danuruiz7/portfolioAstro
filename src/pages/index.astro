@@ -1,0 +1,118 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Proyectos from '../components/Proyectos.astro';
+import Button from '../components/Button.astro';
+import Slider from '../components/Slider.astro';
+---
+
+<Layout title="Daniel Ruiz">
+  <section class="w-full md:w-3/4 px-4">
+    <h1
+      class="w-full text-center text-7xl font-bold"
+      transition:animate="slide"
+    >
+      Daniel Ruiz
+    </h1>
+    <h2 class="animated-title text-lg text-center">
+      Desarrollador Web FullStack
+    </h2>
+
+    <div
+      class="flex flex-col lg:flex-row mt-4 justify-center items-center text-center gap-4 md:px-4"
+    >
+      <div class="order-2 md:order-2 lg:order-none">
+        <article
+          class="md:flex md:flex-col items-center md:items-start md:px-4"
+        >
+          <h3
+            class="w-full md:w-3/4 text-center text-5xl font-bold mb-4 md:text-start"
+          >
+            Sobre mi
+          </h3>
+          <p class="mb-6 text-lg md:text-lg md:text-start">
+            Desarrollador Full Stack con experiencia en Front-end utilizando
+            tecnologías como <strong class="animated-title"
+              >HTML, CSS, JavaScript y React,</strong
+            >{' '}
+             incluyendo <strong class="animated-title">TypeScript</strong>. En
+            el Back-end, tengo sólidos conocimientos en <strong
+              class="animated-title">Node.js, Express.js</strong
+            > y{' '}
+            <strong class="animated-title"
+              >Python con Django Rest Framework</strong
+            >, además de experiencia en bases de datos{' '}
+            <strong class="animated-title">SQL (PostgreSQL y MySQL)</strong>.
+            También soy competente en el uso de <strong class="animated-title">
+              Git y GitHub</strong
+            > para el control de versiones y colaboración en equipo. Con casi un
+            año de experiencia, he adquirido la mayoría de mis habilidades de
+            forma autodidacta. Estoy comprometido con la excelencia en el
+            desarrollo web y siempre estoy ansioso por enfrentar nuevos desafíos
+            y aprender continuamente..
+          </p>
+          <Button href="https://www.linkedin.com/in/daniel-elias-ruiz-medina/">
+            Linkedin
+          </Button>
+        </article>
+      </div>
+      <img
+        class="w-1/2 rounded-full shadow-2xl shadow-neutral-700 md:w-1/3"
+        src="/public/1.png"
+        alt="Perfil"
+        class="card-photo"
+      />
+    </div>
+    <Proyectos />
+    <Slider />
+  </section>
+</Layout>
+
+<style>
+  .animated-title {
+    background-image: linear-gradient(to right, #0073e6, #10f26e);
+    background-clip: text;
+    color: transparent;
+    animation: textAnimation 3s linear infinite; /* Nueva animación para el color del texto */
+  }
+
+  @keyframes textAnimation {
+    0% {
+      color: transparent;
+    }
+    25% {
+      color: #ffcc00; /* Cambia este valor al color que desees en el 25% de la animación */
+    }
+    50% {
+      color: #4caf50; /* Cambia este valor al color que desees en el 50% de la animación */
+    }
+    75% {
+      color: #2196f3; /* Cambia este valor al color que desees en el 75% de la animación */
+    }
+    100% {
+      color: transparent;
+    }
+  }
+
+  @keyframes gradientAnimation {
+    0% {
+      clip-path: polygon(0 0, 0 0, 100% 100%, 0% 100%);
+    }
+    25% {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    50% {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    75% {
+      clip-path: polygon(0 0, 100% 0, 0% 100%, 0% 100%);
+    }
+    100% {
+      clip-path: polygon(0 0, 100% 0, 0% 100%, 0% 100%);
+    }
+  }
+
+  /* .card-button:active {
+    transform: translateY(2px);
+    box-shadow: 0px 0px 50px 1px rgb(255, 255, 255);
+  } */
+</style>

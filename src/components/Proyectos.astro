@@ -1,0 +1,28 @@
+---
+// import Button from './Button.astro';
+// import Github from '../icons/Github.astro';
+// import Prueba from '../icons/Prueba.astro';
+import CardProject from '../components/CardProject.astro';
+import projects from '../mooks/projects.js';
+---
+
+<section id="#proyectos" class="">
+  <h1 id="proyectos" class="w-full text-center text-7xl font-bold my-8">
+    Proyectos
+  </h1>
+
+  <ul class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {
+      projects.map((p) => (
+        <CardProject
+          title={p.title}
+          description={p.description}
+          techs={p.techs}
+          image={p.image}
+          code={p.code}
+          preview={p.preview}
+        />
+      ))
+    }
+  </ul>
+</section>

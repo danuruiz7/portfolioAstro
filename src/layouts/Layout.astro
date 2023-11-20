@@ -1,0 +1,62 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Banner from '../components/Banner.astro';
+import { ViewTransitions, slide } from 'astro:transitions';
+import Footer from '../components/Footer.astro';
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <ViewTransitions />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header
+      class="flex justify-center items-center flex-col shadow shadow-slate-500"
+    >
+      <Banner />
+      <Navbar />
+    </header>
+    <main class="max-w-screen-xl mx-auto flex justify-center py-8">
+      <slot />
+    </main>
+    <Footer />
+    <style is:global>
+      html {
+        font-family: 'Carlito', sans-serif;
+        /* background: #13151a; */
+        background-color: #13151a;
+        color: white;
+
+        /* Para WebKit (Chrome, Safari) */
+        ::-webkit-scrollbar {
+          width: 10px; /* Ancho de la barra de desplazamiento */
+          background-color: #13151a; /* Fondo transparente de la barra de desplazamiento */
+        }
+
+        ::-webkit-scrollbar-thumb {
+          background-color: #828385; /* Color del pulgar de la barra de desplazamiento */
+          border-radius: 50px; /* Borde redondeado del pulgar */
+        }
+
+        ::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.3);
+        }
+      }
+    </style>
+  </body>
+</html>
