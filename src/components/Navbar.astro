@@ -1,28 +1,23 @@
 ---
-
+import Home from '../icons/Home.astro';
+import Formacion from '../icons/Formacion.astro';
 ---
 
 <nav class="flex justify-center text-white w-full mx-auto py-1 bg-slate-700">
-  <ul class="flex justify-around">
+  <ul class="flex justify-around items-center">
     <li>
       <a
         href="/"
-        class="font-bold text-lg hover:bg-gray-700 px-2 py-1 rounded-lg"
-        >Inicio</a
+        class="font-bold text-lg hover:bg-gray-700 px-2 py-1 rounded-lg flex gap-1 items-center"
+        ><span><Home /></span> Inicio</a
       >
     </li>
     <li>
       <a
         href="/about"
-        class="font-bold text-lg hover:bg-gray-700 px-2 py-1 rounded-lg"
-        >Formación</a
+        class="font-bold text-lg hover:bg-gray-700 px-2 py-1 rounded-lg flex gap-1 items-center"
       >
-    </li>
-    <li>
-      <a
-        href="#proyectos"
-        class="font-bold text-lg hover:bg-gray-700 px-2 py-1 rounded-lg"
-        >Proyectos</a
+        <Formacion />Formación</a
       >
     </li>
   </ul>
