@@ -51,8 +51,9 @@ const proyectos = [
     description:
       'Portfolio personal para mostrar mis proyectos, experiencias, habilidades y muchas cosas mas...',
     techs: 'Astro, Tailwind',
-    image: '/public/portfolio.png',
-    code: 'https://github.com/danuruiz7/portfolio/tree/main',
+    image:
+      'https://raw.githubusercontent.com/danuruiz7/portfolioAstro/main/public/portfolio.png',
+    code: 'https://github.com/danuruiz7/portfolioAstro/tree/main',
     preview: '#',
   },
   //Weather App
